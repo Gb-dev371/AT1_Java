@@ -1,0 +1,262 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > Main</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.example</a>
+</div>
+
+<h1>Coverage Summary for Class: Main (org.example)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Main</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/59)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">Main$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/20)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/79)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.example;
+&nbsp;
+&nbsp;import javax.swing.*;
+&nbsp;import java.awt.*;
+&nbsp;import java.awt.event.ActionEvent;
+&nbsp;import java.awt.event.ActionListener;
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;public class Main {</b>
+&nbsp;    public static void main(String[] args) {
+<b class="nc">&nbsp;        JFrame frame = new JFrame(&quot;Calculadora de Números Complexos&quot;);</b>
+<b class="nc">&nbsp;        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</b>
+<b class="nc">&nbsp;        frame.setSize( 800,  400);</b>
+<b class="nc">&nbsp;        frame.setLocationRelativeTo(null);</b>
+&nbsp;
+<b class="nc">&nbsp;        JPanel panel = new JPanel();</b>
+<b class="nc">&nbsp;        panel.setLayout(new GridLayout(6, 6));</b>
+&nbsp;
+<b class="nc">&nbsp;        JTextField inputField1 = new JTextField();</b>
+<b class="nc">&nbsp;        JTextField inputField2 = new JTextField();</b>
+<b class="nc">&nbsp;        JTextField inputField3 = new JTextField();</b>
+<b class="nc">&nbsp;        JTextField inputField4 = new JTextField();</b>
+<b class="nc">&nbsp;        JTextField outputField = new JTextField();</b>
+<b class="nc">&nbsp;        JTextField outputField2 = new JTextField();</b>
+<b class="nc">&nbsp;        JTextField outputField3 = new JTextField();</b>
+<b class="nc">&nbsp;        outputField.setEditable(false);</b>
+<b class="nc">&nbsp;        outputField2.setEditable(false);</b>
+<b class="nc">&nbsp;        outputField2.setBorder(null);</b>
+<b class="nc">&nbsp;        outputField3.setEditable(false);</b>
+&nbsp;
+<b class="nc">&nbsp;        inputField1.setFont((new Font(&quot;Arial&quot;, Font.PLAIN, 15)));</b>
+<b class="nc">&nbsp;        inputField2.setFont((new Font(&quot;Arial&quot;, Font.PLAIN, 15)));</b>
+<b class="nc">&nbsp;        inputField3.setFont((new Font(&quot;Arial&quot;, Font.PLAIN, 15)));</b>
+<b class="nc">&nbsp;        inputField4.setFont((new Font(&quot;Arial&quot;, Font.PLAIN, 15)));</b>
+<b class="nc">&nbsp;        outputField.setFont((new Font(&quot;Arial&quot;, Font.PLAIN, 15)));</b>
+&nbsp;
+<b class="nc">&nbsp;        JLabel complex1 = new JLabel(&quot;Números Reais:&quot;);</b>
+<b class="nc">&nbsp;        complex1.setFont((new Font(&quot;Arial&quot;, Font.BOLD, 20)));</b>
+&nbsp;
+<b class="nc">&nbsp;        JLabel complex2 = new JLabel(&quot;Números imaginários:&quot;);</b>
+<b class="nc">&nbsp;        complex2.setFont((new Font(&quot;Arial&quot;, Font.BOLD, 20)));</b>
+&nbsp;
+<b class="nc">&nbsp;        JLabel result1 = new JLabel(&quot;Resultado real&quot;);</b>
+<b class="nc">&nbsp;        result1.setFont((new Font(&quot;Arial&quot;, Font.BOLD,  20)));</b>
+&nbsp;
+<b class="nc">&nbsp;        JLabel result2 = new JLabel(&quot;Resultado imaginário&quot;);</b>
+<b class="nc">&nbsp;        result2.setFont((new Font(&quot;Arial&quot;, Font.BOLD,  20)));</b>
+&nbsp;
+<b class="nc">&nbsp;        JLabel imaginary1 = new JLabel(&quot;i&quot;);</b>
+<b class="nc">&nbsp;        JLabel imaginary2 = new JLabel(&quot;i&quot;);</b>
+&nbsp;
+<b class="nc">&nbsp;        JLabel label = new JLabel();</b>
+<b class="nc">&nbsp;        label.setFont((new Font(&quot;Arial&quot;, Font.BOLD, 20)));</b>
+&nbsp;
+<b class="nc">&nbsp;        JLabel label1 = new JLabel();</b>
+<b class="nc">&nbsp;        label.setFont((new Font(&quot;Arial&quot;, Font.BOLD, 20)));</b>
+&nbsp;
+<b class="nc">&nbsp;        String[] buttonLabels = {&quot;Somar&quot;, &quot;Subtrair&quot;, &quot;Módulo&quot;};</b>
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;        for(String botoes: buttonLabels){</b>
+<b class="nc">&nbsp;            JButton button = new JButton(botoes);</b>
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;            button.setFont(new Font(&quot;Arial&quot;, Font.PLAIN, 30));</b>
+<b class="nc">&nbsp;            panel.add(button);</b>
+&nbsp;
+<b class="nc">&nbsp;            button.addActionListener(new ActionListener() {</b>
+&nbsp;                @Override
+&nbsp;                public void actionPerformed(ActionEvent e) {
+<b class="nc">&nbsp;                    double numReal1, numReal2, result1=0, result2=0, imaginario1, imaginario2;</b>
+<b class="nc">&nbsp;                    CalculadoraComplexa complex = new CalculadoraComplexa();</b>
+&nbsp;
+&nbsp;                    try{
+<b class="nc">&nbsp;                        numReal1 = Double.parseDouble(inputField1.getText());</b>
+<b class="nc">&nbsp;                        numReal2 = Double.parseDouble(inputField3.getText());</b>
+<b class="nc">&nbsp;                        imaginario1 = Double.parseDouble(inputField2.getText());</b>
+<b class="nc">&nbsp;                        imaginario2 = Double.parseDouble(inputField4.getText());</b>
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;                        if (botoes.equals(&quot;Somar&quot;)){</b>
+&nbsp;
+<b class="nc">&nbsp;                            result1 = complex.somaReais(numReal1, numReal2);</b>
+<b class="nc">&nbsp;                            result2 = complex.somaImaginario(imaginario1, imaginario2);</b>
+&nbsp;                        }
+<b class="nc">&nbsp;                        else if (botoes.equals(&quot;Subtrair&quot;)){</b>
+<b class="nc">&nbsp;                            result1 = complex.subtReais(numReal1, numReal2);</b>
+<b class="nc">&nbsp;                            result2 = complex.subtImaginario(numReal1, numReal2);</b>
+&nbsp;                        }
+<b class="nc">&nbsp;                        else if (botoes.equals(&quot;Módulo&quot;)){</b>
+<b class="nc">&nbsp;                            result2 = CalculadoraComplexa.modulo(numReal1, imaginario1);</b>
+&nbsp;                        }
+<b class="nc">&nbsp;                        outputField.setText(Double.toString(result1));</b>
+<b class="nc">&nbsp;                        outputField3.setText(result2+&quot;i&quot;);</b>
+&nbsp;                    }
+<b class="nc">&nbsp;                    catch (NumberFormatException ex){</b>
+<b class="nc">&nbsp;                        outputField.setText(&quot;Erro: Entrada inválida&quot;);</b>
+<b class="nc">&nbsp;                    }</b>
+&nbsp;                }
+&nbsp;            });
+&nbsp;        }
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;        panel.add(complex1);</b>
+<b class="nc">&nbsp;        panel.add(complex2);</b>
+<b class="nc">&nbsp;        panel.add(label);</b>
+<b class="nc">&nbsp;        panel.add(inputField1);</b>
+<b class="nc">&nbsp;        panel.add(inputField2);</b>
+<b class="nc">&nbsp;        panel.add(imaginary1);</b>
+<b class="nc">&nbsp;        panel.add(inputField3);</b>
+<b class="nc">&nbsp;        panel.add(inputField4);</b>
+<b class="nc">&nbsp;        panel.add(imaginary2);</b>
+<b class="nc">&nbsp;        panel.add(result1);</b>
+<b class="nc">&nbsp;        panel.add(result2);</b>
+<b class="nc">&nbsp;        panel.add(label1);</b>
+<b class="nc">&nbsp;        panel.add(outputField);</b>
+<b class="nc">&nbsp;        panel.add(outputField3);</b>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<b class="nc">&nbsp;        frame.add(panel);</b>
+<b class="nc">&nbsp;        frame.setVisible(true);</b>
+&nbsp;    }
+&nbsp;}
+&nbsp;
+&nbsp;//    O teste de caixa branca esta ligado com comportamento interno do componente de software.
+&nbsp;//    O testador tem acesso ao código fonte da aplicação e pode construir códigos para efetuar a ligação de bibliotecas e componentes.
+&nbsp;//    Exemplo: O uso da ferramenta livre JUnit para desenvolvimento de casos de teste, para avaliar classes ou métodos desenvolvidos na linguagem Java.
+&nbsp;//
+&nbsp;//    No teste de caixa preta os dados de entrada são fornecidos, o teste é executado e o resultado obtido é comparado a um resultado esperado previamente conhecido.
+&nbsp;//    Haverá sucesso no teste se o resultado obtido for igual ao resultado esperado.
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-12-18 11:36</div>
+</div>
+</body>
+</html>
